@@ -4,6 +4,7 @@
 #include <limits.h>
 #include <queue>
 #include <string.h>
+#include<chrono>
 using namespace std;
 
 // Number of vertices in given graph
@@ -105,8 +106,11 @@ int fordFulkerson(int graph[V][V], int s, int t)
 
 // Driver program to test above functions
 int main()
+
 {
 	// Let us create a graph shown in the above example
+	auto a = std::chrono::high_resolution_clock::now();
+
 	//int graph[V][V]
 	//	= { { 0, 16, 13, 0, 0, 0 }, { 0, 0, 10, 12, 0, 0 },
 	//		{ 0, 4, 0, 0, 14, 0 }, { 0, 0, 9, 0, 0, 20 },
@@ -125,6 +129,9 @@ int main()
 
 	cout << "The maximum possible flow is "
 		<< fordFulkerson(graph, 0, 5)<<endl;
+	auto b = std::chrono::high_resolution_clock::now();
+
+	cout<<"Time Taken By Ford Fulkersons Algorithm: "<<std::chrono::duration_cast<std::chrono::microseconds>(b-a).count()<<" microseconds"<< endl;	
 
 	return 0;
 }
