@@ -1,6 +1,8 @@
 // C++ implementation of Dinic's Algorithm
 #include<bits/stdc++.h>
+#include<chrono>
 using namespace std;
+
 
 // A structure to represent a edge between
 // two vertex
@@ -168,6 +170,7 @@ int Graph::DinicMaxflow(int s, int t)
 // Driver Code
 int main()
 {
+   		auto a = std::chrono::high_resolution_clock::now();
 	Graph g(6);
 	/*g.addEdge(0, 1, 16 );
 	g.addEdge(0, 2, 13 );
@@ -205,5 +208,7 @@ int main()
 	g.addEdge(4, 5, 10 ); 
 
 	cout << "Maximum flow " << g.DinicMaxflow(0, 5)<<endl;
+	auto b = std::chrono::high_resolution_clock::now();
+	cout<<"Time Taken By Dinic Algorithm: "<<std::chrono::duration_cast<std::chrono::microseconds>(b-a).count()<<" microseconds"<< endl;	
 	return 0;
 }
