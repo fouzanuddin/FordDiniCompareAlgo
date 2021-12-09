@@ -2,6 +2,8 @@
 # Developers that worked on this project : Fouzan Uddin ( 11475342) ; Jerline Jayaraj (11457829)
 # Subject : Analysis of Algorithm ( Fall 2021 )
 # GitHub link :https://github.com/fouzanuddin/FordDiniCompareAlgo/
+# References :https://www.geeksforgeeks.org/dinics-algorithm-maximum-flow/ ; https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/
+
 Our Project Link :
 
 How to Run the code:
